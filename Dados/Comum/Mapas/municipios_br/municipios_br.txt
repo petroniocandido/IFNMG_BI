@@ -1,0 +1,53 @@
+===================================
+GISMAPS - www.gismaps.com.br
+===================================
+Mapas Temáticos - Geoprocessamento
+===================================
+
+* Grupo: Divisão Política
+
+* Título: Municípios do Brasil
+
+* Descrição: Mapa da malha municipal do Brasil e sede dos municípios; população, área, 
+	    nome e código dos municípios e das micro e meso regiões.
+
+* Ano/Revisão: 2002.2
+
+* Data de atualização: 21/06/2005
+
+* Fonte: IBGE
+
+* Conteúdo:
+
+**************** municipios_br.dbf ****************
+NOMEUF		-nome da Unidade da Federação
+REGIAO		-nome da região
+CODMESO	-código da meso-região
+NOMEMESO	-nome da meso-região
+CODMICRO	-código da micro-região
+NOMEMICRO	-nome da micro-região
+NOME_1		-nome do município sem acentuação
+NOME_2		-nome do município
+CODIGO_UF	-código da Unidade da Federação
+CODIGO_MUN	-código do município
+AREA_1997	-área do município em km2
+
+A malha municipal do IBGE utilizada como referência é a de 1997.
+
+****************  sede_municipios.dbf  ****************
+CODMUNIC	-código do município
+NOMEMUNICP	-nome do município sem acentuação
+NOMEMUNIC	-nome do município
+CODUF		-código da Unidade da Federação
+NOMEUF		-nome da Unidade da Federação
+REGIAO		-nome da região
+CODMESO	-código da meso-região
+NOMEMESO	-nome da meso-região
+CODMICRO	-código da micro-região
+NOMEMICRO	-nome da micro-região
+LONGITUDE	-longitude da sede do município
+LATITUDE	-latitude da sede do município
+
+===================================
+GISMAPS - www.gismaps.com.br
+===================================

@@ -1,0 +1,112 @@
+INDICADORES
+	- BIBLIOTECA
+		- Quantidade de alunos por exemplar
+		- Média de empréstimos por faixa etária / curso / sexo
+		
+	- ACADÊMICO
+		- Média de notas de uma disciplina ao longo do tempo
+		- Coeficiente de Rendimento 
+		- Quantidade de faltas por época do ano ou dia da semana
+		
+	- MISTO
+		- A média de empréstimos de livros de uma determinada área relacionada com a média de notas da disciplina afim.
+
+
+DIMENSÕES CONFORMES
+	
+dimPessoas
+	- Sexo
+	- DataNascimento
+	- CidadeOrigem
+	- EstadoCivil
+	- Tipo
+		- Discente
+		- Docente
+		- TecnicoAdministrativo
+		- Externo
+		
+dimCampus
+	- Nome
+	- Cidade
+	
+dimArea (Licenciatura, Bacharelado, Engenharia, Tecnologia, Tecnicos)
+	- Nome
+	- Nivel (Superior / Tecnico)
+		
+	
+dimCurso
+	- Curso
+	- Area
+	- Duracao
+	- Turno
+	- Modalidade (Presencial / Semi-Presencial / Distancia)
+	- Campus
+	
+	
+dimCidade
+	- Rua
+	- Bairro
+	- MicroRegiao
+	- Cidade
+	- MesoRegiao
+	- Estado
+	- MacroRegiao
+	
+
+bridgeAreaConhecimentoDisciplina
+	- fkDisciplina
+	- fkAreaConhecimento
+
+ACADEMICO
+	
+	DIMENSÕES
+		dimPeriodo
+		
+		dimDisciplina
+			- Disciplina
+			- CargaHoraria
+			
+		dimSituacao (Matriculado / Aprovado / Reprovado / Desistente / Trancada / Transferencia Interna / Transferência Externa)
+			- Situacao
+			
+		*****dimAula
+			Dia
+			Disciplina
+	
+	FATOS
+		fatoMatriculaPorDisciplina ( Semestre )
+			- Nota
+			- Frequencia
+						
+		fatoMatriculaPorCurso
+			- DataMatricula
+		
+BIBLIOTECA
+	DIMENSÕES
+		dimBiblioteca
+			- Campus
+			
+		dimEditora
+		
+		dimTipoObra (Livro / Revista / Jornal / ....)
+			
+		dimObra
+			Titulo
+			Edição
+			Editora
+			TipoObra
+			
+		dimAreaConhecimento
+			- CDD - Classificação Decimal de Dewey
+			Descrição
+			
+		dimAutor 
+			- Cutter - 
+			Nome
+			Sexo
+			
+	FATOS
+		fatoExemplar
+		fatoEmprestimo
+			- DiasAtraso
+			- Multa

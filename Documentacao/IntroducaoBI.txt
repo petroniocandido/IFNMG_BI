@@ -1,0 +1,68 @@
+-------------------------------------------
+-- SLIDES
+-------------------------------------------
+
+	- Pesquisa BI IFNMG
+	https://docs.google.com/presentation/d/1VS9zM1MFgrRfekhWyn8tQM_p3E-jxmOP1XuwQUpVxG0/edit?usp=sharing
+
+	- Business Intelligence - Data Warehouse
+	https://docs.google.com/presentation/d/18R88E2tVODqGnea55gdqLgNk-lhrmEEO7uOoIZHimrM/edit?usp=sharing
+	
+	- Business Intelligence - Suíte Pentaho
+	https://docs.google.com/presentation/d/1noTou8tuAHwlpJ8XbP1836qPZcttZJ93AzOXgUHn04g/edit?usp=sharing
+	
+	- Business Analytics
+	https://docs.google.com/presentation/d/1W3I-3-O7EaQeEcNTRJkhTUooOxDQDxA4W2KGNiZ3-ZQ/edit?usp=sharing
+	
+-------------------------------------------
+-- EXEMPLOS DE PORTAIS DE BI
+-------------------------------------------
+	
+http://www.paraondefoiomeudinheiro.org.br/dataset/estado-sao-paulo-2012
+
+http://ison.stratebi.es/aerobrasil/
+
+http://www.it4biz.com.br/apps/dados.gov.br/obrasdopac/
+
+http://www.estatisticasfutebolbrasileiro.com/
+
+	
+-------------------------------------------
+-- VÍDEOS
+-------------------------------------------
+
+O que é BI
+http://www.youtube.com/watch?v=4PVArSXKEfk
+
+Aula 01 - Curso Gratuito Online Desmistificando BI (Business Intelligence) Open Source
+http://www.youtube.com/watch?v=bKYLFrEXbrM&feature=plcp
+
+Aula 02 - Curso Gratuito Online Desmistificando BI (Business Intelligence) Open Source
+http://www.youtube.com/watch?v=D3dwHcVbD40&feature=plcp
+
+Palestra sobre Pentaho (BI Open Source) @ Campus Party 2011 - Parte 1
+http://www.youtube.com/watch?v=riPQPEpr-lw
+
+Palestra sobre Pentaho (BI Open Source) @ Campus Party 2011 - Parte 2
+http://www.youtube.com/watch?v=EPKu_rDwMuA
+
+Data Warehouse - Conceitos
+http://www.youtube.com/watch?v=8kf2buQMNjo
+
+Data Warehouse - Granularidade - Parte I
+http://www.youtube.com/watch?v=JxoWD8zPYII
+
+Data Warehouse - Granularidade - Parte II
+http://www.youtube.com/watch?v=OmhdOJI4VZU
+
+Pentaho Open Source - Parte 1
+http://www.youtube.com/watch?v=eHn_hE748wI
+
+Pentaho Open Source - Parte 2
+http://www.youtube.com/watch?v=6iGg5uwAUGw
+
+BI e Pentaho: Desenvolvimento Ágil
+http://www.youtube.com/watch?v=Fv1J452qbnI
+
+BI Open Source e Dados Abertos
+http://www.it4biz.com.br/novosite/treinamentos/treinamentos/curso-gratuito-online-de-open-data-dados-abertos-e-bi-open-source/
