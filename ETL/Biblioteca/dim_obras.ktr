@@ -95,60 +95,6 @@
   <order>
   <hop> <from>String operations</from><to>If field value is null</to><enabled>Y</enabled> </hop>  <hop> <from>ds_exemplaresobras</from><to>String operations</to><enabled>Y</enabled> </hop>  <hop> <from>Unique rows (HashSet)</from><to>dim_obras</to><enabled>Y</enabled> </hop>  <hop> <from>If field value is null</from><to>Unique rows (HashSet)</to><enabled>Y</enabled> </hop>  </order>
   <step>
-    <name>dim_obras</name>
-    <type>DimensionLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <schema/>
-      <table>dim_obras</table>
-      <connection>conexao</connection>
-      <commit>100</commit>
-      <update>Y</update>
-      <fields>
-        <key>
-          <name>Codigo</name>
-          <lookup>chavedominio</lookup>
-        </key>
-        <date>
-          <name>versaodata</name>
-          <from>date_from</from>
-          <to>date_to</to>
-        </date>
-        <field>
-          <name>Titulo</name>
-          <lookup>Titulo</lookup>
-          <update>Insert</update>
-        </field>
-        <return>
-          <name>obraid</name>
-          <rename/>
-          <creation_method>autoinc</creation_method>
-          <use_autoinc>Y</use_autoinc>
-          <version>versao</version>
-        </return>
-      </fields>
-      <sequence/>
-      <min_year>1900</min_year>
-      <max_year>2199</max_year>
-      <cache_size>5000</cache_size>
-      <preload_cache>N</preload_cache>
-      <use_start_date_alternative>N</use_start_date_alternative>
-      <start_date_alternative>none</start_date_alternative>
-      <start_date_field_name/>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>306</xloc>
-      <yloc>266</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>If field value is null</name>
     <type>IfNull</type>
     <description/>
@@ -248,6 +194,60 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>469</xloc>
       <yloc>265</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_obras</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_obras</table>
+      <connection>conexao</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>Codigo</name>
+          <lookup>chavedominio</lookup>
+        </key>
+        <date>
+          <name>versaodata</name>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <field>
+          <name>Titulo</name>
+          <lookup>Titulo</lookup>
+          <update>Insert</update>
+        </field>
+        <return>
+          <name>obraid</name>
+          <rename/>
+          <creation_method>autoinc</creation_method>
+          <use_autoinc>Y</use_autoinc>
+          <version>versao</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>306</xloc>
+      <yloc>266</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
