@@ -1,0 +1,70 @@
+<Schema name="New Schema1">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Pessoa">
+    <Hierarchy name="Padrao" visible="true" hasAll="true">
+      <Table name="dim_pessoas">
+      </Table>
+      <Level name="Nome" visible="true" column="Nome" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tipo" visible="true" column="Tipo" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Obra">
+    <Hierarchy name="Padrao" visible="true" hasAll="true">
+      <Table name="dim_obras">
+      </Table>
+      <Level name="Obra" visible="true" column="Titulo" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Data_Devolvido">
+    <Hierarchy name="Padrao" visible="true" hasAll="true">
+      <Table name="dimtempo">
+      </Table>
+      <Level name="Dia" visible="true" column="day_of_month_number" type="Numeric" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+      <Level name="Mes" visible="true" column="month_name" type="String" internalType="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="Ano" visible="true" column="year_number" type="Numeric" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Data_Emprestimo">
+    <Hierarchy name="Padrao" visible="true" hasAll="true">
+      <Table name="dimtempo">
+      </Table>
+      <Level name="Dia" visible="true" column="day_of_month_number" type="Numeric" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+      <Level name="Mes" visible="true" column="month_name" type="String" internalType="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="Ano" visible="true" column="year_number" type="Numeric" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Data_Devolucao">
+    <Hierarchy name="Padrao" visible="true" hasAll="true">
+      <Table name="dimtempo">
+      </Table>
+      <Level name="Dia" visible="true" column="day_of_month_number" type="Numeric" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+      <Level name="Mes" visible="true" column="month_name" type="String" internalType="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="Ano" visible="true" column="year_number" type="Numeric" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Emprestimo" visible="true" cache="true" enabled="true">
+    <Table name="fatoemprestimo">
+    </Table>
+    <DimensionUsage source="Pessoa" name="Pessoa" visible="true" foreignKey="pessoaid" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Data_Devolvido" name="Data_Devolvido" visible="true" foreignKey="emprestimoid" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Data_Emprestimo" name="Data_Emprestimo" visible="true" foreignKey="emprestimoid">
+    </DimensionUsage>
+    <DimensionUsage source="Data_Devolucao" name="Data_Devolucao" visible="true" foreignKey="devolucaoid">
+    </DimensionUsage>
+    <Measure name="Atraso" column="dias_atraso" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
